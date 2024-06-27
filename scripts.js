@@ -5,21 +5,21 @@ let computerScore = 0;
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
 
-    let computerChoice;
+    let choice;
     switch (randomNumber) {
         case 0:
-            computerChoice = "rock"
+            choice = "rock"
             break;
         
         case 1:
-            computerChoice = "paper"
+            choice = "paper"
             break;
 
         case 2:
-            computerChoice = "scissors"
+            choice = "scissors"
             break;
     }
-    return computerChoice;
+    return choice;
 }
 
 // Get the player's choice for a round
