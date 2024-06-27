@@ -24,7 +24,7 @@ function getComputerChoice() {
 
 // Get the player's choice for a round
 function getHumanChoice() {
-    choice = prompt("Enter choice (rock, paper, scissors):");
+    let choice = prompt("Enter choice (rock, paper, scissors):");
     if (choice) {
         choice = choice.toLowerCase();
         if (choice === "rock" 
