@@ -1,4 +1,5 @@
 let humanScore = 0;
+let computerScore = 0;
 
 // Get the computer's choice for a round
 function getComputerChoice() {
