@@ -25,14 +25,16 @@ function getComputerChoice() {
 // Get the player's choice for a round
 function getHumanChoice() {
     choice = prompt("Enter choice (rock, paper, scissors):");
-    choice = choice.toLowerCase();
-    
-    if (choice === "rock" 
-        || choice === "paper"
-        || choice === "scissors"
-    ) {
-        return choice;
+    if (choice) {
+        choice = choice.toLowerCase();
+        if (choice === "rock" 
+            || choice === "paper"
+            || choice === "scissors"
+        ) {
+            return choice;
+        }
     }
+    
     console.log(`invalid choice - using "rock" instead`);
     return "rock";
 }
