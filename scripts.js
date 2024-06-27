@@ -1,3 +1,5 @@
+let humanScore = 0;
+
 // Get the computer's choice for a round
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
