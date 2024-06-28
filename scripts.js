@@ -81,3 +81,31 @@ function playRound(humanChoice, computerChoice) {
 
     return winner;
 }
+
+// Plays 'numRounds' rounds of rock paper scissors, 
+// then displays the overall winner
+function playGame() {
+    // Game loop
+    for (let i = 0; i < 5; i++) {
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+        let winner = playRound(humanSelection, computerSelection);
+
+        console.log(`You chose: ${humanSelection}`);
+        console.log(`Computer chose: ${computerSelection}`);
+        console.log(`Round ${i + 1} Winner: ${winner}`);
+        console.log("");
+    }
+
+    // Display game's result
+    console.log("GAME RESULT:");
+    console.log(`Human Score: ${humanScore} | Computer Score: ${computerScore}`);
+    
+    if (humanScore > computerScore) {
+        console.log("WINNER: Human");
+    } else if (computerScore > humanScore) {
+        console.log("WINNER: Computer");
+    } else {
+        console.log("WINNER: Tie");
+    }
+}
