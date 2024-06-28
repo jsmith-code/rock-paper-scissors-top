@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 // Get the computer's choice for a round
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -50,20 +47,16 @@ function playRound(humanChoice, computerChoice) {
     switch (humanChoice) {
         case "rock":
             if (computerChoice === "scissors") {
-                humanScore++;
                 winner = "human";
             } else if (computerChoice === "paper") {
-                computerScore++;
                 winner = "computer";
             }
             break;
             
         case "paper":
             if (computerChoice === "rock") {
-                humanScore++;
                 winner = "human";
             } else if (computerChoice === "scissors") {
-                computerScore++;
                 winner = "computer";
             }
             break;
@@ -71,9 +64,7 @@ function playRound(humanChoice, computerChoice) {
         case "scissors":
             if (computerChoice === "paper") {
                 winner = "human";
-                humanScore++;
             } else if (computerChoice === "rock") {
-                computerScore++;
                 winner = "computer";
             }
             break;
@@ -85,11 +76,20 @@ function playRound(humanChoice, computerChoice) {
 // Plays 'numRounds' rounds of rock paper scissors, 
 // then displays the overall winner
 function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
     // Game loop
     for (let i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
         let winner = playRound(humanSelection, computerSelection);
+        
+        if (winner === "human") {
+            humanScore++;
+        } else if (winner === "computer") {
+            computerScore++;
+        }
 
         console.log(`You chose: ${humanSelection}`);
         console.log(`Computer chose: ${computerSelection}`);
