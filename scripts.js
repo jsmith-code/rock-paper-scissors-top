@@ -40,8 +40,8 @@ function getHumanChoice() {
 }
 
 // Plays rock paper scissors
-// Increments scores and returns "human", 
-// "computer", or "tie" based on round
+// If a winner is found, increments winner's score 
+// Returns "human", "computer", or "tie" based on round
 function playRound(humanChoice, computerChoice) {
     // If no win condition met, we can assume a tie
     let winner = "tie"; 
