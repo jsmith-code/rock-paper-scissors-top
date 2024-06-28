@@ -109,3 +109,5 @@ function playGame() {
         console.log("WINNER: Tie");
     }
 }
+
+playGame();
