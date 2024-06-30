@@ -10,10 +10,7 @@ function getHumanChoice() {
     let choice = prompt("Enter choice (rock, paper, scissors):");
     if (choice) {
         choice = choice.toLowerCase();
-        if (choice === "rock" 
-            || choice === "paper"
-            || choice === "scissors"
-        ) {
+        if (CHOICES.includes(choice)) {
             return choice;
         }
     }
