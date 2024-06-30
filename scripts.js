@@ -1,22 +1,8 @@
+const CHOICES = ["rock", "paper", "scissors"];
 // Get the computer's choice for a round
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
-
-    let choice;
-    switch (randomNumber) {
-        case 0:
-            choice = "rock"
-            break;
-        
-        case 1:
-            choice = "paper"
-            break;
-
-        case 2:
-            choice = "scissors"
-            break;
-    }
-    return choice;
+    return CHOICES[randomNumber];
 }
 
 // Get the player's choice for a round
