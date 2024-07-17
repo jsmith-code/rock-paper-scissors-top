@@ -22,7 +22,7 @@ function getHumanChoice() {
 // Plays rock paper scissors
 // If a winner is found, increments winner's score 
 // Returns "human", "computer", or "tie" based on round
-function playRound(humanChoice, computerChoice) {
+function getWinner(humanChoice, computerChoice) {
     // If no win condition met, we can assume a tie
     let winner = "tie"; 
 
@@ -66,7 +66,7 @@ function playGame() {
     for (let i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
-        let winner = playRound(humanSelection, computerSelection);
+        let winner = getWinner(humanSelection, computerSelection);
         
         if (winner === "human") {
             humanScore++;
