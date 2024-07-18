@@ -56,6 +56,18 @@ function getWinner(humanChoice, computerChoice) {
     return winner;
 }
 
+function playRound(humanSelection, computerSelection) {
+    winner = getWinner(humanSelection, computerSelection);
+    if (winner === "human") {
+        console.log(`Human Wins! Human: ${humanSelection} | Computer: ${computerSelection}`)
+    } else if (winner === "computer") {
+        console.log(`Computer Wins! Human: ${humanSelection} | Computer: ${computerSelection}`)
+    } else {
+        console.log(`Tie! Human: ${humanSelection} | Computer: ${computerSelection}`)
+    }
+    return winner;
+}
+
 // Plays 'numRounds' rounds of rock paper scissors, 
 // then displays the overall winner
 function playGame() {
