@@ -19,20 +19,6 @@ function getComputerChoice() {
     return CHOICES[randomNumber];
 }
 
-// Get the player's choice for a round
-function getHumanChoice() {
-    let choice = prompt("Enter choice (rock, paper, scissors):");
-    if (choice) {
-        choice = choice.toLowerCase();
-        if (CHOICES.includes(choice)) {
-            return choice;
-        }
-    }
-    
-    console.log(`invalid choice - using "rock" instead`);
-    return "rock";
-}
-
 // Plays rock paper scissors
 // If a winner is found, increments winner's score 
 // Returns "human", "computer", or "tie" based on round
