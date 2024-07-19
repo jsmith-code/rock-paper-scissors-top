@@ -1,4 +1,13 @@
 const CHOICES = ["rock", "paper", "scissors"];
+
+const rockButton = document.querySelector('#rock')
+const paperButton = document.querySelector('#paper')
+const scissorsButton = document.querySelector('#scissors')
+
+rockButton.addEventListener('click', () => playRound("rock", getComputerChoice()))
+paperButton.addEventListener('click', () => playRound("paper", getComputerChoice()))
+scissorsButton.addEventListener('click', () => playRound("scissors", getComputerChoice()))
+
 // Get the computer's choice for a round
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
@@ -104,5 +113,3 @@ function playGame() {
         console.log("WINNER: Tie");
     }
 }
-
-playGame();
