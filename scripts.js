@@ -58,7 +58,9 @@ function playRound(humanSelection, computerSelection) {
     if (gameOver) {
         return;
     }
+    
     winner = getWinner(humanSelection, computerSelection);
+
     if (winner === "human") {
         console.log(`Human Wins! Human: ${humanSelection} | Computer: ${computerSelection}`)
         humanScore++;
