@@ -19,8 +19,6 @@ function getComputerChoice() {
     return CHOICES[randomNumber];
 }
 
-// Plays rock paper scissors
-// If a winner is found, increments winner's score 
 // Returns "human", "computer", or "tie" based on round
 function getWinner(humanChoice, computerChoice) {
     // If no win condition met, we can assume a tie
